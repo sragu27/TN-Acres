@@ -362,3 +362,12 @@ section:nth-of-type(even) {
   background-color: var(--primaryColor);
     border-color: var(--primaryColor)
 }
+
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--primaryColor);
+    outline: 0;
+    box-shadow: none;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Property</title>
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap/css/boostrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="assets/css/font.css" />
+  
+     <!-- AOS CSS -->
+     <link rel="stylesheet" href="assets/vendor/aos/css/aos.css">
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+     <!-- header -->
+     <div id="header"></div>
+
+     <!-- main -->
+
+     <div class="container py-5 mt-5">
+  <h2 class="fw-bold mb-4">Post Your Property</h2>
+
+  <form id="postPropertyForm" enctype="multipart/form-data">
+    <!-- Property Title -->
+    <div class="mb-3">
+      <label class="form-label">Property Title</label>
+      <input type="text" class="form-control" name="title" required>
+    </div>
+
+    <!-- Location -->
+    <div class="mb-3">
+      <label class="form-label">Location</label>
+      <input type="text" class="form-control" name="location" required>
+    </div>
+
+    <!-- Type (Buy/Rent) -->
+    <div class="mb-3">
+      <label class="form-label">Property Type</label>
+      <select class="form-select" name="type" required>
+        <option value="buy">Buy</option>
+        <option value="rent">Rent</option>
+      </select>
+    </div>
+
+    <!-- Price -->
+    <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input type="number" class="form-control" name="price" required>
+    </div>
+
+    <!-- BHK -->
+    <div class="mb-3">
+      <label class="form-label">BHK</label>
+      <input type="number" class="form-control" name="bhk" min="1" required>
+    </div>
+
+    <!-- Size -->
+    <div class="mb-3">
+      <label class="form-label">Size (sqft)</label>
+      <input type="number" class="form-control" name="size" required>
+    </div>
+
+    <!-- Images -->
+    <div class="mb-3">
+      <label class="form-label">Upload Images</label>
+      <input type="file" class="form-control" name="images" accept="image/*" multiple required>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" name="desc" rows="4"></textarea>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary">Submit Property</button>
+  </form>
+</div>
+
+
+
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="assets/vendor/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="assets/vendor/aos/js/aos.js"></script>
+    
+</body>
+</html>
