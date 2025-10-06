@@ -3,7 +3,7 @@ const headerHTML = `
 <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img class="img-fluid" src="assets/images/msme-brand.png" alt="brand-img">
+      <img class="img-fluid" src="assets/images/logo-brand.png" alt="brand-img">
     </a>
 
     <!-- Toggle button for small screens -->

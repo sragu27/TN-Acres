@@ -60,8 +60,8 @@ ul {
   :root {
   --white: #ffffff;
   --black: #000000;
-  --primaryColor:#fb5400;
-  --primaryDark: #e14a00;
+  --primaryColor:#1f4e2c;
+  --primaryDark: #0c3618;
   --blush:#fef7f4;
   --lime:#ccff80;
   --mint:#e9fcca;
@@ -286,8 +286,8 @@ section:nth-of-type(even) {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #e14a00 !important; /* darker orange */
-  border-color: #e14a00 !important;
+  background-color: var(--primaryDark) !important; /* darker orange */
+  border-color: var(--primaryDark) !important;
   color: var(--white) !important;
 }
 
@@ -371,3 +371,15 @@ section:nth-of-type(even) {
     outline: 0;
     box-shadow: none;
 }
+
+
+ @media (max-width: 769px){
+.hero-subtitle{
+  margin-top: 30px;
+}
+.cta-section a{
+  margin-bottom: 16px;
+}
+
+
+ }

@@ -105,88 +105,66 @@
   <div id="overlay"></div> -->
 
 
-<!-- Hero Section -->
-<section class="hero position-relative">
-  <div class="hero-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.5);"></div>
-  <div class="container position-relative text-center text-white d-flex flex-column justify-content-center align-items-center h-100">
+ <!-- HERO SECTION -->
+  <section class="hero position-relative" id="hero">
+    <div class="hero-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative text-center text-white d-flex flex-column justify-content-center align-items-center h-100 py-5">
+      <div class="header-wrapper mb-5">
+        <h6 class="hero-subtitle fw-light">Welcome to TN Acres</h6>
+        <h1 class="hero-title display-5 fw-bold">
+          FIND YOUR <span class="text-warning">PERFECT SPACE</span> IN MINUTES
+        </h1>
+        <p class="hero-text fs-5 mt-3">Explore premium properties across Tamil Nadu with ease and confidence.</p>
+      </div>
 
-    <div class="header-wrapper mb-5">
-      <h6 class="hero-subtitle fw-light">Welcome to TN Acres</h6>
-      <h1 class="hero-title display-4 fw-bold">
-        FIND YOUR <span class="highlight text-warning">PERFECT SPACE</span> IN MINUTES
-      </h1>
-      <p class="hero-text fs-5 mt-3">Explore premium properties across Tamil Nadu with ease and confidence.</p>
-    </div>
+      <!-- SEARCH CARD -->
+      <div class="search-card bg-white rounded-4 shadow-lg p-4 w-100" style="max-width: 1000px;">
+        <div class="row g-3 align-items-center justify-content-center">
 
-    <!-- Search Card -->
-    <div class="search-card bg-white rounded-4 shadow-lg p-4 w-100" style="max-width: 1000px;">
-      <div class="row g-3 align-items-center justify-content-center">
+          <!-- State -->
+          <div class="col-md-3">
+            <select id="stateFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
+              <option value="all">Select State</option>
+            </select>
+          </div>
 
-        <!-- Property Type -->
-        <div class="col-md-3">
-          <select id="heroTypeFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
-            <option value="all" selected>Property Type</option>
-            <option value="buy">Buy</option>
-            <option value="rent">Rent</option>
-          </select>
+          <!-- Taluk -->
+          <div class="col-md-3">
+            <select id="talukFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
+              <option value="all">Select Taluk</option>
+            </select>
+          </div>
+
+          <!-- Village -->
+          <div class="col-md-3">
+            <select id="villageFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
+              <option value="all">Select Village</option>
+            </select>
+          </div>
+
+          <!-- Search Button -->
+          <div class="col-md-3 d-grid">
+            <button class="btn btn-warning btn-lg rounded-pill" id="searchBtn">Search</button>
+          </div>
         </div>
-
-        <!-- Location -->
-        <div class="col-md-3">
-          <input type="text" id="heroSearchInput" class="form-control form-control-lg bg-light border-0 rounded-pill" placeholder="City or Area">
-        </div>
-
-        <!-- Price -->
-        <div class="col-md-3">
-          <select id="heroPriceFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
-            <option value="all" selected>Price Range</option>
-            <option value="low">Below ₹25L / ₹20k</option>
-            <option value="mid">₹25L–₹50L / ₹20k–₹50k</option>
-            <option value="high">Above ₹50L / ₹50k</option>
-          </select>
-        </div>
-
-        <!-- BHK -->
-        <div class="col-md-2">
-          <select id="heroBhkFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
-            <option value="all" selected>BHK</option>
-            <option value="1">1 BHK</option>
-            <option value="2">2 BHK</option>
-            <option value="3">3 BHK</option>
-            <option value="4">4+ BHK</option>
-          </select>
-        </div>
-
-        <!-- Search Button -->
-        <div class="col-md-3 d-grid">
-          <button class="btn btn-warning btn-lg rounded-pill" id="heroSearchBtn">Search</button>
-        </div>
-
       </div>
     </div>
-    
-  </div>
-</section>
+  </section>
 
+  <!-- FEATURED PROPERTIES -->
+  <section class="featured-properties py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6">Featured <span class="text-primary">Properties</span></h2>
+        <p class="text-muted fs-6">Find your dream home with smart filters and real-time search.</p>
+      </div>
 
-<!-- Featured Properties Section -->
-<section class="featured-properties py-5" style="background: #f8f9fa;">
-  <div class="container">
-    <!-- Header -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold display-6">Featured <span class="text-primary">Properties</span></h2>
-      <p class="text-muted fs-6">Find your dream home with smart filters and real-time search.</p>
+      <div class="row g-4" id="propertyGrid"></div>
+      <div class="text-center mt-4">
+        <button id="loadMoreBtn" class="btn btn-primary px-5 py-2 rounded-pill">Load More</button>
+      </div>
     </div>
-
-    <!-- Properties Grid -->
-    <div class="row g-4" id="propertyGrid"></div>
-
-    <!-- Load More -->
-    <div class="text-center mt-4">
-      <button id="loadMoreBtn" class="btn btn-primary px-5 py-2 rounded-pill">Load More</button>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- Why Choose Us -->
 <section class="why-choose-us py-5 bg-white">
@@ -303,15 +281,29 @@
 
 <!-- CTA Section -->
 <section class="cta-section position-relative text-white py-5">
-  <!-- Background -->
   <div class="cta-bg position-absolute top-0 start-0 w-100 h-100"></div>
-  <div class="container position-relative text-center py-5">
-    <h2 class="display-5 fw-bold mb-3">Ready to Find Your Dream Property?</h2>
-    <p class="lead mb-4">Buy, sell, or rent verified properties across Tamil Nadu with TN Acres.</p>
-    <a href="#search" class="btn btn-lg btn-primary rounded-pill px-4">Start Your Search</a>
-    <a href="#list-property" class="btn btn-lg btn-outline-light rounded-pill ms-3 px-4">List Your Property</a>
+  <div class="container position-relative py-5">
+    <div class="row align-items-center">
+      <!-- Left: Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h2 class="display-5 fw-bold mb-3">Find Your Dream Property in Tamil Nadu</h2>
+        <p class="lead mb-4">Browse verified properties, filter by district, taluk, and village, and discover your ideal home with TN Acres.</p>
+        <a href="#hero" class="btn btn-primary btn-lg rounded-pill px-4 me-3">
+          <i class="bi bi-search me-2"></i> Start Your Search
+        </a>
+        <a href="#list-property" class="btn btn-outline-light btn-lg rounded-pill px-4">
+          <i class="bi bi-plus-circle me-2"></i> List Your Property
+        </a>
+      </div>
+      <!-- Right: Image or subtle illustration -->
+      <div class="col-lg-6 text-center">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+             alt="Dream Property" class="img-fluid rounded-4 shadow-lg">
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- Contact Section -->
 <section class="contact-section py-5 bg-light">
@@ -504,106 +496,136 @@
     <script src="assets/vendor/aos/js/aos.js"></script>
 
 <script>
-// Dummy property data (expanded)
-const properties = [
-  {id:1,type:'buy',title:'Luxury Villa in Chennai',location:'ECR Road, Chennai',bhk:3,bath:2,size:'2400 sqft',priceValue:12000000,price:'₹ 1.2 Cr',img:'assets/images/lux.jpg'},
-  {id:2,type:'rent',title:'Modern Apartment in Coimbatore',location:'Gandhipuram, Coimbatore',bhk:2,bath:2,size:'1200 sqft',priceValue:25000,price:'₹ 25,000 / month',img:'assets/images/lux.jpg'},
-  {id:3,type:'buy',title:'Independent House in Trichy',location:'Srirangam, Trichy',bhk:4,bath:3,size:'2800 sqft',priceValue:9000000,price:'₹ 90 Lakhs',img:'assets/images/lux.jpg'},
-  {id:4,type:'rent',title:'2BHK Flat in Salem',location:'Fairlands, Salem',bhk:2,bath:1,size:'950 sqft',priceValue:15000,price:'₹ 15,000 / month',img:'assets/images/lux.jpg'},
-  {id:5,type:'buy',title:'Premium Villa in Madurai',location:'Anna Nagar, Madurai',bhk:3,bath:3,size:'2200 sqft',priceValue:10000000,price:'₹ 1 Cr',img:'assets/images/lux.jpg'},
-  {id:6,type:'rent',title:'Studio Apartment in Tirunelveli',location:'Palayamkottai, Tirunelveli',bhk:1,bath:1,size:'650 sqft',priceValue:8500,price:'₹ 8,500 / month',img:'assets/images/lux.jpg'},
-  {id:7,type:'buy',title:'Beachside Villa in Pondicherry',location:'White Town, Pondicherry',bhk:5,bath:4,size:'3500 sqft',priceValue:25000000,price:'₹ 2.5 Cr',img:'assets/images/lux.jpg'},
-  {id:8,type:'rent',title:'Budget Room in Chennai',location:'T. Nagar, Chennai',bhk:1,bath:1,size:'450 sqft',priceValue:6000,price:'₹ 6,000 / month',img:'assets/images/lux.jpg'},
-  {id:9,type:'buy',title:'Modern House in Bangalore',location:'Whitefield, Bangalore',bhk:3,bath:2,size:'1800 sqft',priceValue:8000000,price:'₹ 80 Lakhs',img:'assets/images/lux.jpg'},
-  {id:10,type:'rent',title:'2BHK Flat in Coimbatore',location:'RS Puram, Coimbatore',bhk:2,bath:2,size:'1100 sqft',priceValue:20000,price:'₹ 20,000 / month',img:'assets/images/lux.jpg'},
-  {id:11,type:'buy',title:'Independent House in Chennai',location:'Velachery, Chennai',bhk:3,bath:3,size:'2000 sqft',priceValue:11000000,price:'₹ 1.1 Cr',img:'assets/images/lux.jpg'},
-  {id:12,type:'rent',title:'1BHK Apartment in Madurai',location:'KK Nagar, Madurai',bhk:1,bath:1,size:'600 sqft',priceValue:10000,price:'₹ 10,000 / month',img:'assets/images/lux.jpg'}
-];
+    const properties = [
+      {id:1,type:'buy',title:'Luxury Villa',state:'Tamil Nadu',taluk:'Chennai',village:'ECR Road',bhk:3,bath:2,size:'2400 sqft',price:'₹ 1.2 Cr',img:'assets/images/lux.jpg'},
+      {id:2,type:'rent',title:'Modern Apartment',state:'Tamil Nadu',taluk:'Coimbatore',village:'Gandhipuram',bhk:2,bath:2,size:'1200 sqft',price:'₹ 25,000 / month',img:'assets/images/lux.jpg'},
+      {id:3,type:'buy',title:'Independent House',state:'Tamil Nadu',taluk:'Trichy',village:'Srirangam',bhk:4,bath:3,size:'2800 sqft',price:'₹ 90 Lakhs',img:'assets/images/lux.jpg'},
+      {id:4,type:'rent',title:'2BHK Flat',state:'Tamil Nadu',taluk:'Salem',village:'Fairlands',bhk:2,bath:1,size:'950 sqft',price:'₹ 15,000 / month',img:'assets/images/lux.jpg'},
+      {id:5,type:'buy',title:'Premium Villa',state:'Tamil Nadu',taluk:'Madurai',village:'Anna Nagar',bhk:3,bath:3,size:'2200 sqft',price:'₹ 1 Cr',img:'assets/images/lux.jpg'},
+      {id:6,type:'rent',title:'Studio Apartment',state:'Tamil Nadu',taluk:'Tirunelveli',village:'Palayamkottai',bhk:1,bath:1,size:'650 sqft',price:'₹ 8,500 / month',img:'assets/images/lux.jpg'}
+    ];
+  </script>
 
-let filteredProperties = [...properties];
-let itemsPerPage = 6;
-let currentIndex = 0;
 
-// Create card
-function createCard(property){
-  return `
-    <div class="col-md-4 property-card">
-      <a href="property-details.html?id=${property.id}" class="text-decoration-none text-dark">
-        <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden position-relative">
-          <img src="${property.img}" class="card-img-top" style="height:250px; object-fit:cover;">
-          <span class="property-tag ${property.type==='buy'?'bg-primary':'bg-success'} text-white">${property.type.charAt(0).toUpperCase()+property.type.slice(1)}</span>
-          <div class="card-body">
-            <h5 class="fw-bold">${property.title}</h5>
-            <p class="text-muted mb-1"><i class="bi bi-geo-alt"></i> ${property.location}</p>
-            <ul class="list-inline small text-muted mb-2">
-              <li class="list-inline-item"><i class="bi bi-house-door"></i> ${property.bhk} BHK</li>
-              <li class="list-inline-item"><i class="bi bi-droplet"></i> ${property.bath} Bath</li>
-              <li class="list-inline-item"><i class="bi bi-aspect-ratio"></i> ${property.size}</li>
-            </ul>
-            <p class="fw-bold ${property.type==='buy'?'text-primary':'text-success'}">${property.price}</p>
+<!-- MAIN SCRIPT -->
+<script>
+  let filteredProperties = [...properties];
+  let itemsPerPage = 3; // ✅ show only 2 cards at first
+  let currentIndex = 0;
+
+  const stateDropdown = document.getElementById('stateFilter');
+  const talukDropdown = document.getElementById('talukFilter');
+  const villageDropdown = document.getElementById('villageFilter');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const propertyGrid = document.getElementById('propertyGrid');
+
+  // Populate States
+  function populateStates() {
+    const states = [...new Set(properties.map(p => p.state))];
+    stateDropdown.innerHTML = '<option value="all">Select State</option>';
+    states.forEach(s => stateDropdown.insertAdjacentHTML('beforeend', `<option value="${s}">${s}</option>`));
+    stateDropdown.value = "Tamil Nadu";
+    populateTaluks();
+  }
+
+  // Populate Taluks
+  function populateTaluks() {
+    const state = stateDropdown.value;
+    const taluks = [...new Set(properties.filter(p => p.state === state).map(p => p.taluk))];
+    talukDropdown.innerHTML = '<option value="all">Select Taluk</option>';
+    taluks.forEach(t => talukDropdown.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
+    populateVillages();
+  }
+
+  // Populate Villages
+  function populateVillages() {
+    const taluk = talukDropdown.value;
+    const villages = [...new Set(properties.filter(p => p.taluk === taluk || taluk === 'all').map(p => p.village))];
+    villageDropdown.innerHTML = '<option value="all">Select Village</option>';
+    villages.forEach(v => villageDropdown.insertAdjacentHTML('beforeend', `<option value="${v}">${v}</option>`));
+  }
+
+  // Create Card
+  function createCard(property){
+    return `
+      <div class="col-md-4 property-card">
+        <a href="property-details.html?id=${property.id}" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden position-relative">
+            <img src="${property.img}" class="card-img-top" style="height:250px; object-fit:cover;">
+            <span class="property-tag ${property.type==='buy'?'bg-primary':'bg-success'} text-white position-absolute top-0 start-0 m-3 px-3 py-1 rounded-pill">${property.type.toUpperCase()}</span>
+            <div class="card-body">
+              <h5 class="fw-bold">${property.title}</h5>
+              <p class="text-muted mb-1"><i class="bi bi-geo-alt"></i> ${property.village}, ${property.taluk}</p>
+              <ul class="list-inline small text-muted mb-2">
+                <li class="list-inline-item"><i class="bi bi-house-door"></i> ${property.bhk} BHK</li>
+                <li class="list-inline-item"><i class="bi bi-droplet"></i> ${property.bath} Bath</li>
+                <li class="list-inline-item"><i class="bi bi-aspect-ratio"></i> ${property.size}</li>
+              </ul>
+              <p class="fw-bold ${property.type==='buy'?'text-primary':'text-success'}">${property.price}</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-  `;
-}
+        </a>
+      </div>
+    `;
+  }
 
-// Render properties
-function renderProperties(reset=false){
-  const grid = document.getElementById('propertyGrid');
-  if(reset){ grid.innerHTML=''; currentIndex=0; }
-  const nextItems = filteredProperties.slice(currentIndex,currentIndex+itemsPerPage);
-  nextItems.forEach(p => grid.insertAdjacentHTML('beforeend',createCard(p)));
-  
-  currentIndex += itemsPerPage;
-  document.getElementById('loadMoreBtn').style.display = currentIndex >= filteredProperties.length ? 'none':'inline-block';
-}
+  // Render Properties
+  function renderProperties(reset=false){
+    if(reset){ propertyGrid.innerHTML=''; currentIndex=0; }
 
-// Hero filters
-const heroType = document.getElementById('heroTypeFilter');
-const heroBhk = document.getElementById('heroBhkFilter');
-const heroPrice = document.getElementById('heroPriceFilter');
-const heroSearch = document.getElementById('heroSearchInput');
-const heroBtn = document.getElementById('heroSearchBtn');
-
-function applyHeroFilters(){
-  const type = heroType.value;
-  const bhk = heroBhk.value;
-  const price = heroPrice.value;
-  const search = heroSearch.value.toLowerCase();
-
-  filteredProperties = properties.filter(p=>{
-    let match = true;
-
-    if(type!=='all' && p.type!==type) match=false;
-    if(bhk!=='all'){
-      if(bhk==='4' && p.bhk<4) match=false;
-      else if(bhk!=='4' && p.bhk!=bhk) match=false;
+    if(filteredProperties.length === 0){
+      propertyGrid.innerHTML = `<p class="text-center text-danger fs-5">No properties found for your selection.</p>`;
+      loadMoreBtn.style.display = 'none';
+      return;
     }
-    if(price!=='all'){
-      if(price==='low' && p.priceValue>(p.type==='rent'?20000:5000000)) match=false;
-      if(price==='mid' && (p.priceValue<(p.type==='rent'?20000:5000000) || p.priceValue>(p.type==='rent'?50000:10000000))) match=false;
-      if(price==='high' && p.priceValue<(p.type==='rent'?50000:10000000)) match=false;
-    }
-    if(search && !(p.title.toLowerCase().includes(search) || p.location.toLowerCase().includes(search))) match=false;
 
-    return match;
-  });
+    const nextItems = filteredProperties.slice(currentIndex, currentIndex + itemsPerPage);
+    nextItems.forEach(p => propertyGrid.insertAdjacentHTML('beforeend', createCard(p)));
 
+    currentIndex += itemsPerPage;
+    loadMoreBtn.style.display = currentIndex >= filteredProperties.length ? 'none' : 'inline-block';
+  }
+
+  // Apply Filters
+  function applyFilters(){
+    const state = stateDropdown.value;
+    const taluk = talukDropdown.value;
+    const village = villageDropdown.value;
+
+    filteredProperties = properties.filter(p=>{
+      let match = true;
+      if(state!=='all' && p.state!==state) match=false;
+      if(taluk!=='all' && p.taluk!==taluk) match=false;
+      if(village!=='all' && p.village!==village) match=false;
+      return match;
+    });
+
+    renderProperties(true);
+  }
+
+  // Event Listeners
+  stateDropdown.addEventListener('change', () => { populateTaluks(); applyFilters(); });
+  talukDropdown.addEventListener('change', () => { populateVillages(); applyFilters(); });
+  villageDropdown.addEventListener('change', applyFilters);
+  document.getElementById('searchBtn').addEventListener('click', applyFilters);
+  loadMoreBtn.addEventListener('click',()=>renderProperties(false));
+
+  // Init
+  populateStates();
   renderProperties(true);
-}
-
-// Event listeners
-heroBtn.addEventListener('click',applyHeroFilters);
-heroSearch.addEventListener('input',applyHeroFilters);
-heroType.addEventListener('change',applyHeroFilters);
-heroBhk.addEventListener('change',applyHeroFilters);
-heroPrice.addEventListener('change',applyHeroFilters);
-document.getElementById('loadMoreBtn').addEventListener('click',()=>renderProperties(false));
-
-// Initial load
-renderProperties(true);
 </script>
+<!-- cta section -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+</script>
+
  
 
 

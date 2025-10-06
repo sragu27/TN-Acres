@@ -108,7 +108,7 @@ option:checked {
   .property-card img { transition: transform 0.4s ease; }
   .property-card:hover img { transform: scale(1.05); }
   .property-tag {
-    position: absolute; top: 10px; right: 10px;
+    position: absolute; top: 10px; 
     font-size: 0.85rem; padding: 5px 10px; border-radius: 50px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   }
@@ -138,7 +138,7 @@ option:checked {
   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-.cta-section {
+/* .cta-section {
   min-height: 350px;
   display: flex;
   align-items: center;
@@ -153,4 +153,38 @@ option:checked {
 .cta-section h2, 
 .cta-section p {
   z-index: 2;
+} */
+
+.cta-section {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.cta-bg {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  filter: brightness(0.6);
+  transition: all 0.5s ease;
+}
+
+.cta-section h2, .cta-section p {
+  z-index: 2;
+}
+
+.cta-section .btn-primary:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+.cta-section .btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
 }
