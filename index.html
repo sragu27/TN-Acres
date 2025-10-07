@@ -106,65 +106,65 @@
 
 
  <!-- HERO SECTION -->
-  <section class="hero position-relative" id="hero">
-    <div class="hero-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.5);"></div>
-    <div class="container position-relative text-center text-white d-flex flex-column justify-content-center align-items-center h-100 py-5">
-      <div class="header-wrapper mb-5">
-        <h6 class="hero-subtitle fw-light">Welcome to TN Acres</h6>
-        <h1 class="hero-title display-5 fw-bold">
-          FIND YOUR <span class="text-warning">PERFECT SPACE</span> IN MINUTES
-        </h1>
-        <p class="hero-text fs-5 mt-3">Explore premium properties across Tamil Nadu with ease and confidence.</p>
-      </div>
 
-      <!-- SEARCH CARD -->
-      <div class="search-card bg-white rounded-4 shadow-lg p-4 w-100" style="max-width: 1000px;">
-        <div class="row g-3 align-items-center justify-content-center">
+<section class="hero position-relative" id="hero">
+  <div class="hero-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.5);"></div>
+  <div class="container position-relative text-center text-white d-flex flex-column justify-content-center align-items-center h-100 py-5">
+    <div class="header-wrapper mb-5">
+      <h6 class="hero-subtitle fw-light">Welcome to TN Acres</h6>
+      <h1 class="hero-title display-5 fw-bold">
+        FIND YOUR <span class="text-warning">PERFECT SPACE</span> IN MINUTES
+      </h1>
+      <p class="hero-text fs-5 mt-3">Explore premium properties across Tamil Nadu with ease and confidence.</p>
+    </div>
 
-          <!-- State -->
-          <div class="col-md-3">
-            <select id="stateFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
-              <option value="all">Select State</option>
-            </select>
-          </div>
+    <!-- SEARCH CARD -->
+    <div class="search-card bg-white rounded-4 shadow-lg p-4 w-100" style="max-width: 1000px;">
+      <div class="row g-3 align-items-center justify-content-center">
 
-          <!-- Taluk -->
-          <div class="col-md-3">
-            <select id="talukFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
-              <option value="all">Select Taluk</option>
-            </select>
-          </div>
+        <!-- District -->
+        <div class="col-md-3">
+          <select id="districtFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
+            <option value="all">Select District</option>
+          </select>
+        </div>
 
-          <!-- Village -->
-          <div class="col-md-3">
-            <select id="villageFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
-              <option value="all">Select Village</option>
-            </select>
-          </div>
+        <!-- Taluk -->
+        <div class="col-md-3">
+          <select id="talukFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
+            <option value="all">Select Taluk</option>
+          </select>
+        </div>
 
-          <!-- Search Button -->
-          <div class="col-md-3 d-grid">
-            <button class="btn btn-warning btn-lg rounded-pill" id="searchBtn">Search</button>
-          </div>
+        <!-- Village -->
+        <div class="col-md-3">
+          <select id="villageFilter" class="form-select form-select-lg bg-light border-0 rounded-pill">
+            <option value="all">Select Village</option>
+          </select>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FEATURED PROPERTIES -->
-  <section class="featured-properties py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold display-6">Featured <span class="text-primary">Properties</span></h2>
-        <p class="text-muted fs-6">Find your dream home with smart filters and real-time search.</p>
-      </div>
-
-      <div class="row g-4" id="propertyGrid"></div>
-      <div class="text-center mt-4">
-        <button id="loadMoreBtn" class="btn btn-primary px-5 py-2 rounded-pill">Load More</button>
+      <div class="mt-4 d-flex justify-content-center">
+        <button class="btn btn-warning btn-lg rounded-pill px-5" id="searchBtn">Search</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTIES -->
+<section class="featured-properties py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6">Featured <span class="text-primary">Properties</span></h2>
+      <p class="text-muted fs-6">Find your dream home with smart filters and real-time search.</p>
+    </div>
+
+    <div class="row g-4" id="propertyGrid"></div>
+    <div class="text-center mt-4">
+      <button id="loadMoreBtn" class="btn btn-primary px-5 py-2 rounded-pill">Load More</button>
+    </div>
+  </div>
+</section>
 
 <!-- Why Choose Us -->
 <section class="why-choose-us py-5 bg-white">
@@ -495,125 +495,151 @@
     <!-- AOS JS -->
     <script src="assets/vendor/aos/js/aos.js"></script>
 
-<script>
-    const properties = [
-      {id:1,type:'buy',title:'Luxury Villa',state:'Tamil Nadu',taluk:'Chennai',village:'ECR Road',bhk:3,bath:2,size:'2400 sqft',price:'₹ 1.2 Cr',img:'assets/images/lux.jpg'},
-      {id:2,type:'rent',title:'Modern Apartment',state:'Tamil Nadu',taluk:'Coimbatore',village:'Gandhipuram',bhk:2,bath:2,size:'1200 sqft',price:'₹ 25,000 / month',img:'assets/images/lux.jpg'},
-      {id:3,type:'buy',title:'Independent House',state:'Tamil Nadu',taluk:'Trichy',village:'Srirangam',bhk:4,bath:3,size:'2800 sqft',price:'₹ 90 Lakhs',img:'assets/images/lux.jpg'},
-      {id:4,type:'rent',title:'2BHK Flat',state:'Tamil Nadu',taluk:'Salem',village:'Fairlands',bhk:2,bath:1,size:'950 sqft',price:'₹ 15,000 / month',img:'assets/images/lux.jpg'},
-      {id:5,type:'buy',title:'Premium Villa',state:'Tamil Nadu',taluk:'Madurai',village:'Anna Nagar',bhk:3,bath:3,size:'2200 sqft',price:'₹ 1 Cr',img:'assets/images/lux.jpg'},
-      {id:6,type:'rent',title:'Studio Apartment',state:'Tamil Nadu',taluk:'Tirunelveli',village:'Palayamkottai',bhk:1,bath:1,size:'650 sqft',price:'₹ 8,500 / month',img:'assets/images/lux.jpg'}
-    ];
-  </script>
 
-
-<!-- MAIN SCRIPT -->
 <script>
-  let filteredProperties = [...properties];
-  let itemsPerPage = 3; // ✅ show only 2 cards at first
+document.addEventListener("DOMContentLoaded", () => {
+
+  // --- Districts
+  const districtsTN = ["Ariyalur","Chengalpattu","Chennai","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kallakurichi","Kancheepuram","Karur","Krishnagiri","Madurai","Mayiladuthurai","Nagapattinam","Namakkal","Nilgiris","Perambalur","Pudukkottai","Ramanathapuram","Ranipet","Salem","Sivagangai","Tenkasi","Thanjavur","Theni","Thoothukudi","Tiruchirappalli","Tirunelveli","Tirupathur","Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur","Vellore","Viluppuram","Virudhunagar","Kanyakumari"];
+
+  // --- Sample taluks + villages (replace with full govt data if available)
+  const talukData = {
+    Chennai: ["Tondiarpet","Egmore","Mambalam","Guindy","Mylapore"],
+    Coimbatore: ["Coimbatore North","Coimbatore South","Pollachi","Mettupalayam"],
+    Madurai: ["Madurai North","Madurai South","Thirumangalam"],
+    Salem: ["Salem","Omalur","Attur","Mettur"],
+    Tiruchirappalli: ["Srirangam","Lalgudi","Manapparai"],
+    Tirunelveli: ["Tirunelveli","Ambasamudram","Palayamkottai"]
+  };
+
+  const villageData = {
+    "Madurai North": ["Anna Nagar","K.Pudur","Narimedu"],
+    "Madurai South": ["Tirunagar","Tirupparankundram","Avaniapuram"],
+    "Srirangam": ["Thiruvanaikoil","Srirangam West","Kallukuzhi"],
+    "Coimbatore South": ["Gandhipuram","Peelamedu","Ramanathapuram"],
+    "Tirunelveli": ["Palayamkottai","Vannarpettai","Melapalayam"],
+    "Mylapore": ["Adyar","Alwarpet","Mandaveli"]
+  };
+
+  const districtDropdown = document.getElementById("districtFilter");
+  const talukDropdown = document.getElementById("talukFilter");
+  const villageDropdown = document.getElementById("villageFilter");
+  const propertyGrid = document.getElementById("propertyGrid");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+  // --- Property Data
+  const properties = [
+    {id:1,type:'buy',title:'Luxury Villa',district:'Chennai',taluk:'Mylapore',village:'Adyar',price:'₹1.2 Cr',img:'assets/images/lux.jpg'},
+    {id:2,type:'rent',title:'Modern Apartment',district:'Coimbatore',taluk:'Coimbatore South',village:'Gandhipuram',price:'₹25,000 / month',img:'assets/images/lux.jpg'},
+    {id:3,type:'buy',title:'Independent House',district:'Tiruchirappalli',taluk:'Srirangam',village:'Thiruvanaikoil',price:'₹90 Lakhs',img:'assets/images/lux.jpg'},
+    {id:4,type:'rent',title:'2BHK Flat',district:'Salem',taluk:'Salem',village:'Fairlands',price:'₹15,000 / month',img:'assets/images/lux.jpg'},
+    {id:5,type:'buy',title:'Premium Villa',district:'Madurai',taluk:'Madurai North',village:'Anna Nagar',price:'₹1 Cr',img:'assets/images/lux.jpg'},
+    {id:6,type:'buy',title:'Premium Villa',district:'Tirunelveli',taluk:'Ambasamudram',village:'Palayamkottai',price:'₹80 lakhs Cr',img:'assets/images/lux.jpg'}
+  ];
+
+  let filteredProperties = [];
   let currentIndex = 0;
+  const itemsPerPage = 3;
 
-  const stateDropdown = document.getElementById('stateFilter');
-  const talukDropdown = document.getElementById('talukFilter');
-  const villageDropdown = document.getElementById('villageFilter');
-  const loadMoreBtn = document.getElementById('loadMoreBtn');
-  const propertyGrid = document.getElementById('propertyGrid');
+  // --- Save properties in localStorage for details page
+  localStorage.setItem('properties', JSON.stringify(properties));
 
-  // Populate States
-  function populateStates() {
-    const states = [...new Set(properties.map(p => p.state))];
-    stateDropdown.innerHTML = '<option value="all">Select State</option>';
-    states.forEach(s => stateDropdown.insertAdjacentHTML('beforeend', `<option value="${s}">${s}</option>`));
-    stateDropdown.value = "Tamil Nadu";
-    populateTaluks();
+  // --- Populate dropdowns
+  function populateDistricts() {
+    districtDropdown.innerHTML = '<option value="all">Select District</option>';
+    districtsTN.forEach(d => districtDropdown.insertAdjacentHTML('beforeend', `<option value="${d}">${d}</option>`));
   }
 
-  // Populate Taluks
   function populateTaluks() {
-    const state = stateDropdown.value;
-    const taluks = [...new Set(properties.filter(p => p.state === state).map(p => p.taluk))];
+    const district = districtDropdown.value;
+    const taluks = talukData[district] || [];
     talukDropdown.innerHTML = '<option value="all">Select Taluk</option>';
     taluks.forEach(t => talukDropdown.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
     populateVillages();
   }
 
-  // Populate Villages
   function populateVillages() {
     const taluk = talukDropdown.value;
-    const villages = [...new Set(properties.filter(p => p.taluk === taluk || taluk === 'all').map(p => p.village))];
+    const villages = villageData[taluk] || [];
     villageDropdown.innerHTML = '<option value="all">Select Village</option>';
     villages.forEach(v => villageDropdown.insertAdjacentHTML('beforeend', `<option value="${v}">${v}</option>`));
   }
 
-  // Create Card
-  function createCard(property){
-    return `
-      <div class="col-md-4 property-card">
-        <a href="property-details.html?id=${property.id}" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden position-relative">
-            <img src="${property.img}" class="card-img-top" style="height:250px; object-fit:cover;">
-            <span class="property-tag ${property.type==='buy'?'bg-primary':'bg-success'} text-white position-absolute top-0 start-0 m-3 px-3 py-1 rounded-pill">${property.type.toUpperCase()}</span>
-            <div class="card-body">
-              <h5 class="fw-bold">${property.title}</h5>
-              <p class="text-muted mb-1"><i class="bi bi-geo-alt"></i> ${property.village}, ${property.taluk}</p>
-              <ul class="list-inline small text-muted mb-2">
-                <li class="list-inline-item"><i class="bi bi-house-door"></i> ${property.bhk} BHK</li>
-                <li class="list-inline-item"><i class="bi bi-droplet"></i> ${property.bath} Bath</li>
-                <li class="list-inline-item"><i class="bi bi-aspect-ratio"></i> ${property.size}</li>
-              </ul>
-              <p class="fw-bold ${property.type==='buy'?'text-primary':'text-success'}">${property.price}</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    `;
-  }
+  // --- Filter properties
+  function applyFilters() {
+    const d = districtDropdown.value;
+    const t = talukDropdown.value;
+    const v = villageDropdown.value;
 
-  // Render Properties
-  function renderProperties(reset=false){
-    if(reset){ propertyGrid.innerHTML=''; currentIndex=0; }
-
-    if(filteredProperties.length === 0){
-      propertyGrid.innerHTML = `<p class="text-center text-danger fs-5">No properties found for your selection.</p>`;
-      loadMoreBtn.style.display = 'none';
-      return;
-    }
-
-    const nextItems = filteredProperties.slice(currentIndex, currentIndex + itemsPerPage);
-    nextItems.forEach(p => propertyGrid.insertAdjacentHTML('beforeend', createCard(p)));
-
-    currentIndex += itemsPerPage;
-    loadMoreBtn.style.display = currentIndex >= filteredProperties.length ? 'none' : 'inline-block';
-  }
-
-  // Apply Filters
-  function applyFilters(){
-    const state = stateDropdown.value;
-    const taluk = talukDropdown.value;
-    const village = villageDropdown.value;
-
-    filteredProperties = properties.filter(p=>{
-      let match = true;
-      if(state!=='all' && p.state!==state) match=false;
-      if(taluk!=='all' && p.taluk!==taluk) match=false;
-      if(village!=='all' && p.village!==village) match=false;
-      return match;
-    });
-
+    filteredProperties = properties.filter(p =>
+      (d==='all'||p.district===d) &&
+      (t==='all'||p.taluk===t) &&
+      (v==='all'||p.village===v)
+    );
     renderProperties(true);
   }
 
-  // Event Listeners
-  stateDropdown.addEventListener('change', () => { populateTaluks(); applyFilters(); });
-  talukDropdown.addEventListener('change', () => { populateVillages(); applyFilters(); });
-  villageDropdown.addEventListener('change', applyFilters);
-  document.getElementById('searchBtn').addEventListener('click', applyFilters);
-  loadMoreBtn.addEventListener('click',()=>renderProperties(false));
+  // --- Create property card
+  function createCard(p) {
+    const typeBadgeColor = p.type==='buy' ? 'bg-primary' : 'bg-success';
+    const typeLabel = p.type==='buy' ? 'BUY' : 'RENT';
+    return `
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow border-0 rounded-4 overflow-hidden position-relative">
+          <a href="property-details.html?id=${p.id}" style="text-decoration:none;color:inherit">
+            <div class="position-relative">
+              <img src="${p.img}" class="card-img-top" style="height:250px;object-fit:cover;">
+              <span class="badge ${typeBadgeColor} position-absolute top-0 start-0 m-2 px-3 py-2 fs-6 rounded-pill shadow-sm">${typeLabel}</span>
+            </div>
+            <div class="card-body">
+              <h5 class="fw-bold">${p.title}</h5>
+              <p class="text-muted mb-1"><i class="bi bi-geo-alt"></i> ${p.village}, ${p.taluk}, ${p.district}</p>
+              <p class="fw-bold ${p.type==='buy'?'text-primary':'text-success'}">${p.price}</p>
+            </div>
+          </a>
+        </div>
+      </div>`;
+  }
 
-  // Init
-  populateStates();
+  // --- Render properties
+  function renderProperties(reset=false) {
+    if(reset){ propertyGrid.innerHTML=''; currentIndex=0; }
+
+    if(filteredProperties.length===0){
+      propertyGrid.innerHTML = `
+        <div class="text-center py-5 w-100">
+          <img src="assets/images/nodata.svg" style="width:300px;opacity:0.7;border-radius:50px">
+          <h5 class="mt-3 text-muted">No properties found for your search</h5>
+        </div>`;
+      loadMoreBtn.style.display='none';
+      return;
+    }
+
+    const items = filteredProperties.slice(currentIndex,currentIndex+itemsPerPage);
+    items.forEach(p=>propertyGrid.insertAdjacentHTML('beforeend', createCard(p)));
+    currentIndex += itemsPerPage;
+    loadMoreBtn.style.display = currentIndex>=filteredProperties.length ? 'none':'inline-block';
+  }
+
+  // --- Events
+  districtDropdown.addEventListener("change", populateTaluks);
+  talukDropdown.addEventListener("change", populateVillages);
+  document.getElementById("searchBtn").addEventListener("click", applyFilters);
+  loadMoreBtn.addEventListener("click", ()=>renderProperties(false));
+
+  // --- Init
+  populateDistricts();
+  filteredProperties = properties.slice(0,6);
   renderProperties(true);
+
+});
 </script>
+
+
+
+
+
+
 <!-- cta section -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

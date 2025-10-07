@@ -70,7 +70,7 @@ const footerHTML = `
   <div class="container">
     <div class="row gy-4">
       <div class="col-md-4">
-        <a class="mb-3" href="index.html"><img class="img-fluid" src="assets/images/msme-brand.png" alt="img-logo"></a>
+        <a class="mb-3" href="index.html"><img class="img-fluid" src="assets/images/logo.png" alt="img-logo"></a>
         <p class="text-light mt-3">Empowering your financial future with fast, flexible, and transparent loan solutions tailored for individuals and businesses.</p>
       </div>
       <div class="col-md-2">
