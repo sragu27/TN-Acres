@@ -85,10 +85,10 @@ const footerHTML = `
       <div class="col-md-3">
         <h6 class="mb-3 text-uppercase">Our Services</h6>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Business Loan</a></li>
-          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Personal Loan</a></li>
-          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Education Loan</a></li>
-          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Auto Loan</a></li>
+          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Residential</a></li>
+          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Commercial</a></li>
+          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Industrial Loan</a></li>
+          <li class="mb-2"><a href="service.html" class="text-light text-decoration-none">Land/Plots</a></li>
         </ul>
       </div>
       <div class="col-md-3">
